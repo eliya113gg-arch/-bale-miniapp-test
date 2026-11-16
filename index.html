@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mini App Test</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #10121b;
+      color: white;
+      font-family: sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      color: #a78bfa;
+    }
+
+    .counter {
+      font-size: 48px;
+      margin: 30px;
+      font-weight: bold;
+    }
+
+    button {
+      background: linear-gradient(135deg, #8b5cf6, #6366f1);
+      color: white;
+      border: none;
+      border-radius: 18px;
+      padding: 18px 45px;
+      font-size: 20px;
+      cursor: pointer;
+      box-shadow: 0 8px 30px #6366f155;
+    }
+
+    button:active {
+      transform: scale(0.95);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>مینی‌اپ آزمایشی</h1>
+    <p>برای تست دکمه را لمس کن</p>
+
+    <div class="counter" id="counter">0</div>
+
+    <button onclick="addCount()">
+      ✨ لمس کن
+    </button>
+  </div>
+
+  <script>
+    let count = 0;
+
+    function addCount() {
+      count++;
+      document.getElementById("counter").textContent = count;
+    }
+  </script>
+</body>
+</html>
